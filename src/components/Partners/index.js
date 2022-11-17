@@ -12,7 +12,7 @@ import './style.scss';
 const Partners = () => {
     return (
         <Container fluid className='banner px-0'>
-            <Marquee pauseOnHover speed={45} className='marquee'>
+            <Marquee pauseOnHover speed={50} className='marquee'>
                 <div><img src={cambridge} alt="/" className='hover:scale-110 ease-in duration-200' /></div>
             </Marquee>
         </Container>

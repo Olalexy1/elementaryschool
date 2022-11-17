@@ -1,0 +1,28 @@
+{
+    "subjects": [
+      {
+        "id": 1,
+        "name": "Mathematics",
+        "score": "85%",
+        "grade": "Distinction"
+      },
+      {
+        "id": 2,
+        "name": "English",
+        "score": "70%",
+        "grade": "Good"
+      },
+      {
+        "id": 3,
+        "name": "Verbal Reasoning",
+        "score": "50%",
+        "grade": "pass"
+      },
+      {
+        "id": 4,
+        "name": "Quantitative Reasoning",
+        "score": "90%",
+        "grade": "Distinction"
+      }
+    ]
+  }

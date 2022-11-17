@@ -42,18 +42,6 @@
         border: 2px solid #67c7fc !important;
     }
 
-    // .links-alt {
-    //     font-size: 1.10rem;
-    //     font-weight: 500;
-    //     color: #222222 !important;
-    //     line-height: 30px;
-    //     // border-bottom: 3px solid white;
-    //     align-self: center;
-    // }
-
-    .links-alt:hover {
-        border-bottom: 3px solid #222222;
-    }
 
     /* From uiverse.io by @adamgiebl */
     .cssbuttons-io {
@@ -130,9 +118,6 @@
         display: flex;
         justify-content: space-between;
     
-        .links-alt:hover {
-            border-bottom: 3px solid #222222;
-        }
     }
 
 }
@@ -153,8 +138,14 @@
         display: flex;
         justify-content: space-between;
     
-        .links-alt:hover {
-            border-bottom: 3px solid #222222;
+        .links {
+            font-size: 1.10rem;
+            font-weight: 600;
+            color: #f46799 !important;
+            line-height: 30px;
+            border: 2px solid #E478A8 !important;
+            align-self: center;
+            border-radius: 0.8em;
         }
     }
 
@@ -177,17 +168,19 @@
         display: flex;
         justify-content: space-between;
     
-        .links-alt {
+        .links {
             font-size: 1.10rem;
-            font-weight: 500;
-            color: #222222 !important;
+            font-weight: 600;
+            color: #f46799 !important;
             line-height: 30px;
-            // border-bottom: 3px solid white;
+            border: 0px solid #E478A8 !important;
             align-self: center;
+            border-radius: 0.8em;
         }
-    
-        .links-alt:hover {
-            border-bottom: 3px solid #222222;
+
+        .links:hover {
+            border: 0px solid #67c7fc !important;
+            color: #67c7fc !important;
         }
     }
 
@@ -208,6 +201,21 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
+
+        .links {
+            font-size: 1.10rem;
+            font-weight: 600;
+            color: #f46799 !important;
+            line-height: 30px;
+            border: 0px solid #E478A8 !important;
+            align-self: center;
+            border-radius: 0.8em;
+        }
+
+        .links:hover {
+            border: 0px solid #67c7fc !important;
+            color: #67c7fc !important;
+        }
     }
 
 }
@@ -232,6 +240,20 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
+        .links {
+            font-size: 1.10rem;
+            font-weight: 600;
+            color: #f46799 !important;
+            line-height: 30px;
+            border: 0px solid #E478A8 !important;
+            align-self: center;
+            border-radius: 0.8em;
+        }
+
+        .links:hover {
+            border: 0px solid #67c7fc !important;
+            color: #67c7fc !important;
+        }
     }
 
     // .navigation {
