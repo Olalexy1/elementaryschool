@@ -1,4 +1,3 @@
-
 .navigation-container {
     background-color: #685555 !important;
     opacity: 0.9;
@@ -26,7 +25,7 @@
         color: #67c7fc !important;
     }
 
-    
+
 }
 
 .nav-links-container {
@@ -43,6 +42,18 @@
         border: 2px solid #E478A8;
         align-self: center;
         border-radius: 0.8em;
+    }
+
+    #basic-nav-dropdown {
+        color: #f46799 !important;
+    }
+
+
+    .drop-links {
+        font-size: 1.10rem;
+        font-weight: 600;
+        color: #f46799 !important;
+        line-height: 30px;
     }
 
     .links:hover {
@@ -63,47 +74,47 @@
         color: ghostwhite;
         overflow: hidden;
     }
-   
-   .cssbuttons-io span {
-    position: relative;
-    z-index: 10;
-    transition: color 0.4s;
-    display: inline-flex;
-    align-items: center;
-    padding: 0.8em 1.2em 0.8em 1.05em;
-   }
-   
-   .cssbuttons-io::before,
-   .cssbuttons-io::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-   }
-   
-   .cssbuttons-io::before {
-    content: "";
-    background: #222222;
-    width: 120%;
-    left: -10%;
-    transform: skew(30deg);
-    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
-   }
-   
-   .cssbuttons-io:hover::before {
-    transform: translate3d(100%, 0, 0);
-   }
-   
-   .cssbuttons-io:active {
-    transform: scale(0.95);
-   }
-   
+
+    .cssbuttons-io span {
+        position: relative;
+        z-index: 10;
+        transition: color 0.4s;
+        display: inline-flex;
+        align-items: center;
+        padding: 0.8em 1.2em 0.8em 1.05em;
+    }
+
+    .cssbuttons-io::before,
+    .cssbuttons-io::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+
+    .cssbuttons-io::before {
+        content: "";
+        background: #222222;
+        width: 120%;
+        left: -10%;
+        transform: skew(30deg);
+        transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+    }
+
+    .cssbuttons-io:hover::before {
+        transform: translate3d(100%, 0, 0);
+    }
+
+    .cssbuttons-io:active {
+        transform: scale(0.95);
+    }
+
 
 }
 
-  
+
 /* 
 ##Device = Tablets, Ipads (landscape)
 ##Screen = B/w 768px to 1024px
@@ -124,7 +135,7 @@
         width: 90% !important;
         display: flex;
         justify-content: space-between;
-    
+
     }
 
 }
@@ -144,7 +155,7 @@
         width: 90% !important;
         display: flex;
         justify-content: space-between;
-    
+
         .links {
             font-size: 1.10rem;
             font-weight: 600;
@@ -174,7 +185,7 @@
         width: 100% !important;
         display: flex;
         justify-content: space-between;
-    
+
         .links {
             font-size: 1.10rem;
             font-weight: 600;
@@ -226,12 +237,12 @@
     }
 
 }
-  
-  /* 
+
+/* 
     ##Device = Most of the Smartphones Mobiles (Portrait)
     ##Screen = B/w 320px to 479px
   */
-  
+
 @media (min-width: 320px) and (max-width: 480px) {
     .brand {
         display: flex;
@@ -247,6 +258,7 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
+
         .links {
             font-size: 1.10rem;
             font-weight: 600;

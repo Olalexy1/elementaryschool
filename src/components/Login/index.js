@@ -90,7 +90,7 @@ const Login = () => {
           >
             <FormikForm>
               <div className="form-group mb-3">
-                <label htmlFor="username">Username</label>
+                <label className="label" htmlFor="username">Username</label>
                 <Field name="username" type="text" className="form-control mb-2" required />
                 <ErrorMessage
                   name="username"
@@ -100,12 +100,11 @@ const Login = () => {
               </div>
 
               <div className="form-group mb-3">
-                <label htmlFor="password">Password</label>
+                <label className="label" htmlFor="password">Password</label>
                 <InputGroup className="input-group">
                   <Field name="password" type={password} className="form-control mb-2" required />
                   <Form.Text onClick={Eye}>{eye ? <AiFillEyeInvisible className='eye' /> : <AiFillEye className='eye' />}</Form.Text>
                 </InputGroup>
-
                 <ErrorMessage
                   name="password"
                   component="div"
@@ -114,7 +113,7 @@ const Login = () => {
               </div>
 
               <div className="form-group mb-3">
-                <Button type="submit" className="cssbuttons-io form-group" disabled={loading}>
+                <Button type="submit" className="cssbuttons-io" disabled={loading}>
                   {loading && (
                     <Spinner animation="border" />
                   )}
