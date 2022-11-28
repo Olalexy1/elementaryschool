@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom"
 
+
 import { logout } from "../../slices/auth";
 import EventBus from "../../common/EventBus";
 
@@ -14,8 +15,6 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { MdPerson } from 'react-icons/md';
 
 import logo from '../../images/ScholarLogo3.png';
-
-import database from '../database';
 
 import './style.scss';
 
@@ -50,9 +49,9 @@ const NavBar = () => {
       EventBus.remove("logout");
     };
   }, [currentUser, logOut]);
-  
+
   return (
-    <Navbar fluid className="navigation-container" bg="light" expand="lg" sticky="top">
+    <Navbar fluid={"true"} className="navigation-container" bg="light" expand="lg" sticky="top">
       <Container fluid className='navigation'>
         <Navbar.Brand className="brand" href="/">
           <img
@@ -67,14 +66,28 @@ const NavBar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="nav-links-container ms-auto my-1">
             <Nav.Link className='links' href="/">Home</Nav.Link>
-            <Nav.Link className='links' href="/Rooms">Admissions</Nav.Link>
-            <Nav.Link className='links' href="/Booking">Virtual Tour</Nav.Link>
-            <Nav.Link className='links' href="/Blog">Gallery</Nav.Link>
+            <Nav.Link className='links' href="/admissions">Admissions</Nav.Link>
+            <Nav.Link className='links' href="/virtualtour">Virtual Tour</Nav.Link>
+            <Nav.Link className='links' href="/gallery">Gallery</Nav.Link>
             <Nav.Link className='links' href="/Contact">Contact Us</Nav.Link>
-            {/* <Nav.Link className='links' href="/login"><MdPerson /> Login</Nav.Link> */}
+            {showModeratorBoard && (
+              <Nav.Link className='links' href="/mod"><MdPerson /> Moderator Board</Nav.Link>
+            )}
+
+            {showAdminBoard && (
+              <Nav.Link className='links' href="/admin"><MdPerson /> Admin Board</Nav.Link>
+            )}
+
+            {currentUser && (
+              <Nav.Link className='links' href="/user"><MdPerson /> User</Nav.Link>
+            )}
+
             <NavDropdown className='links' title="Account" id="basic-nav-dropdown">
-              <NavDropdown.Item className='drop-links' href="/login"><MdPerson/> Login</NavDropdown.Item>
-              <NavDropdown.Item className='drop-links' href="/register">Register</NavDropdown.Item>
+              {currentUser ? (
+                <><NavDropdown.Item className='drop-links' href="/profile"><MdPerson /> {currentUser.username}</NavDropdown.Item><NavDropdown.Item className='drop-links' href="/login" onClick={logOut}>Logout</NavDropdown.Item></>
+              ) : (
+                <><NavDropdown.Item className='drop-links' href="/login"><MdPerson /> Login</NavDropdown.Item><NavDropdown.Item className='drop-links' href="/register">Register</NavDropdown.Item></>
+              )}
             </NavDropdown>
 
             <button className="cssbuttons-io">

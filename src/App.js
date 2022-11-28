@@ -12,11 +12,10 @@ import Homepage from './pages/HomePage';
 import SubjectPage from './pages/SubjectPage';
 import Login from './components/Login';
 import Register from './components/Register';
-import database from './components/database';
 import Profile from './components/Profile';
 import BoardUser from './components/BoardUser';
-
-import EventBus from "./common/EventBus";
+import BoardModerator from "./components/BoardModerator";
+import BoardAdmin from "./components/BoardAdmin";
 
 function App() {
 
@@ -30,6 +29,8 @@ function App() {
             <Route exact path="/register" element={<Register/>} />
             <Route exact path="/profile" element={<Profile/>} />
             <Route exact path="/user" element={<BoardUser />} />
+            <Route exact path="/mod" element={<BoardModerator />} />
+            <Route exact path="/admin" element={<BoardAdmin />} />
           </Routes>
         <Footer/>
       </Container>

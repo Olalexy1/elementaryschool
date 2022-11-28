@@ -38,7 +38,8 @@ const Footer = () => {
                             <li><a href="/"> Curriculum </a></li>
                             <li><a href="/"> Tuition and Payment </a></li>
                             <li><a href="/"> Blog </a></li>
-                            <li><a href="/">See More...</a></li>
+                            <li><a href="/"> Gallery </a></li>
+                            <li><a href="/"> See More... </a></li>
                         </ul>
                     </Col>
                     <Col lg md={6} className='right-footer inner-footer mb-4'>

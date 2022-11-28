@@ -22,7 +22,7 @@ import { clearMessage } from "../../slices/message";
 const Login = () => {
   let navigate = useNavigate();
 
-  const [password, setPassword] = useState("");
+  const [password, setPassword] = useState("password");
   const [eye, setEye] = useState(true);
   const [type, setType] = useState(false);
   const [loading, setLoading] = useState(false);

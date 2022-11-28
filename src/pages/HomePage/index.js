@@ -9,7 +9,7 @@ import Partners from '../../components/Partners';
 
 
 const Homepage = () => {
-    const [content, setContent] = useState("");
+  const [content, setContent] = useState("");
 
   useEffect(() => {
     userService.getPublicContent().then(
@@ -27,13 +27,14 @@ const Homepage = () => {
     );
   }, []);
 
-    return ( 
-        <Container fluid className='px-0 mx-0'>
-            <Banner/>
-            <Slickcarousel/>
-            <Partners/>
-        </Container>
-     );
+  return (
+    <Container fluid className='px-0 mx-0'>
+      <h3>{content}</h3>
+      <Banner />
+      <Slickcarousel />
+      <Partners />
+    </Container>
+  );
 }
- 
+
 export default Homepage;

@@ -22,7 +22,8 @@ import './style.scss';
 const Register = () => {
     let navigate = useNavigate();
     const [successful, setSuccessful] = useState(false);
-    const [password, setPassword] = useState("");
+    const [password, setPassword] = useState("password");
+    const [confirmPassword, setConfirmPassword] = useState("");
     const [eye, setEye] = useState(true);
     const [type, setType] = useState(false);
     const [loading, setLoading] = useState(false);
@@ -88,7 +89,7 @@ const Register = () => {
             .unwrap()
             .then(() => {
                 setSuccessful(true);
-                navigate("/profile");
+                navigate("/login");
                 window.location.reload();
             })
             .catch(() => {
@@ -141,6 +142,19 @@ const Register = () => {
                                             className="alert alert-danger"
                                         />
                                     </div>
+
+                                    {/* <div className="form-group mb-3">
+                                        <label className="label" htmlFor="password">Confirm Password</label>
+                                        <InputGroup className="input-group">
+                                            <Field name="confirmPassword" type={password} className="form-control mb-2" required />
+                                            <Form.Text onClick={Eye}>{eye ? <AiFillEyeInvisible className='eye' /> : <AiFillEye className='eye' />}</Form.Text>
+                                        </InputGroup>
+                                        <ErrorMessage
+                                            name="password"
+                                            component="div"
+                                            className="alert alert-danger"
+                                        />
+                                    </div> */}
 
                                     <div className="form-group mb-3">
                                         <Button type="submit" className="cssbuttons-io" disabled={loading}>
